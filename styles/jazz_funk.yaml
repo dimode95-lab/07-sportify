@@ -1,0 +1,121 @@
+# 재즈펑크 / 인스트루멘털 그루브 스타일 프로필
+# 근거: 기존 10개 프로필로 커버되지 않은 곡 클러스터 (jazz 28 + funk 17 태그)
+# 상태: AI 초안 — 생성 결과를 듣고 사용자가 교정할 것
+
+name: jazz_funk
+label: 재즈펑크 그루브 (코리 웡 / 데이브레이크 계열)
+
+identity: >-
+  Clean rhythm-guitar funk built on tight instrumental interlock, jazz voicings
+  and horn stabs - works as an instrumental or with a soul-funk vocal on top.
+
+instrumentation:
+  # 화이트리스트 — 여기 없는 악기는 쓰지 않는다
+  allow:
+    - drums (dry live kit, tight snare, ghost notes on the snare, hats doing sixteenths)
+    - electric bass (fingerstyle, few notes, deep pocket, muted eighths and syncopated pushes)
+    - clean electric guitar (single-coil, sixteenth-note muted scratch rhythm, no gain)
+    - second clean electric guitar (chord stabs and short melodic lines, panned opposite the rhythm guitar)
+    - electric piano or clavinet (comping in the gaps, short stabbed chords)
+    - horn section (trumpet, tenor sax, trombone - unison stabs and short riffs)
+  # 곡에 따라 소량 허용
+  optional:
+    - male or female soul vocal (lead, conversational and rhythmic)
+    - analog synth lead for a single solo section (never a pad, never a wash)
+    - tambourine or shaker doubling the hi-hat sixteenths
+    - hand percussion (congas) in breakdown sections only
+  roles: >-
+    Treat the rhythm guitar as a percussion instrument, not a harmony
+    instrument: sixteenth-note muted scratches with only the chosen sixteenths
+    left ringing, locked to the hi-hat. The bass plays as few notes as possible
+    and lets the space between them carry the groove, landing with the kick and
+    pushing against the snare. Drums leave holes - the kick does not fill every
+    beat. Keys and second guitar answer in the gaps left by the rhythm guitar
+    and never comp on top of it. Horns enter only for punctuation: short unison
+    stabs on beat offsets, then silence.
+
+tempo_rhythm: >-
+  Medium funk tempos, roughly 96-116 BPM, with a straight sixteenth-note grid
+  and a slight behind-the-beat lean in the snare. The hi-hat runs continuous
+  sixteenths at low volume; the guitar scratches the upbeat sixteenths while the
+  bass syncopates against the kick. Timing must be extremely precise but
+  audibly human - microscopic push and pull, never grid-quantized. Frequent
+  one-bar drum-and-bass breaks where the guitar drops out entirely.
+
+harmony: >-
+  Functional jazz harmony used as the working vocabulary, not as decoration:
+  dominant 9ths and 13ths, minor 9ths and 11ths, altered dominants resolving
+  down a fourth, and ii-V motion inside otherwise static vamps. Long stretches
+  sit on a single dominant-seventh or minor-seventh vamp with the tension
+  coming from rhythm, then a short turnaround of real chord movement resolves
+  the section. Major-key sections lean warm and retro-soul; minor-key sections
+  lean sharper and more angular.
+
+melody_hooks: >-
+  The rhythmic figure is the hook. Signature devices: a guitar riff that is
+  mostly muted attacks with two or three pitched notes, a horn stab pattern
+  repeated as a section identifier, and a bass line that becomes recognizable
+  through its rests. Solo melodies stay short, motivic and repeated with
+  variation rather than running scales. When a vocal is present the topline is
+  conversational and rhythm-driven, sitting inside the groove rather than
+  arching over it.
+
+dynamic_arc: >-
+  Bars 1-4: guitar scratch alone with hi-hat, establishing the pocket. Bars 5-8:
+  bass and full kit enter, groove locked. Bars 9-16 first section: keys comp in
+  the gaps, no horns yet. Bars 17-24: horn stabs arrive and mark the chorus or
+  head - the widest point so far. Bars 25-32: drop to a drum-and-bass breakdown
+  with the guitar playing single muted notes, at least four bars of real
+  subtraction. Bars 33-48: solo section over the vamp - guitar or horn takes
+  one chorus, the band comps quieter underneath and rebuilds. Bars 49-64: final
+  head with horns doubled and the second guitar added, then end on a hard
+  stop or a single unison hit rather than a fade.
+
+vocal: >-
+  Optional. When present: a warm, rhythmically precise soul-funk voice in a
+  comfortable mid-range, conversational and slightly clipped, phrasing like a
+  horn line - short bursts landing on offbeats, with call-and-response gaps for
+  the band. Light group backing vocals answering the lead in the chorus only,
+  never stacked into a pad. The arrangement is written to stand completely on
+  its own as an instrumental; the vocal sits as one more voice inside the
+  interlock, not above it.
+
+production: >-
+  Clean, dry and separated. Every instrument audible with real space around it -
+  close-miked drums with a short room, direct-in bass with no grit, guitar
+  straight into the amp with no distortion and no chorus. Light compression
+  used for pocket, not for loudness; the mix should never be a wall of sound.
+  Analog-leaning warmth, wide stereo placement of the two guitars, horns
+  centered and slightly back. It must sound like five or six players in a room
+  reacting to each other in real time.
+
+constraints:
+  # Suno가 지시 없이 자기 습관대로 가는 것을 막는 부정 지시
+  - Do not use distorted, overdriven or shredding lead guitar tones.
+  - Do not fill every beat - the space between notes is the point, so no busy drum fills or constant kick patterns.
+  - Do not quantize the performance into a stiff programmed grid, and do not use trap, EDM or house drum patterns.
+  - Do not add synth pads, string sections or reverb washes that blur the instrumental separation.
+  - Do not let horns play sustained backing chords; they punctuate and stop.
+  - Do not treat this as a smooth-jazz or lounge backing track - the rhythmic interlock must stay front and center.
+
+grounding:
+  # 좋아요 데이터에서 관찰된 사실 (감이 아니라 근거)
+  liked_tracks: 45
+  core_era: 2010-2024
+  median_duration_min: 4.0
+  note: >-
+    기존 10개 프로필 중 어디에도 매칭되지 않은 곡들을 모아보니 생긴 커버리지
+    갭. 미커버 태그가 jazz(28)/funk(17)/guitar(12)/progressive rock(10)으로
+    뭉치고, 미커버 아티스트 상위가 Cory Wong(10곡), DAYBREAK(13곡), The
+    Fearless Flyers(2곡), Rollercoaster(4곡), 250(3곡). 라이브러리 다른 쪽에는
+    술탄 오브 더 디스코(25곡), Tower Of Power, Alan Baylock Jazz Orchestra,
+    Jeff Golub, 이진아, 김오키가 있음. Cory Wong / Vulfpeck 계열이 축이라
+    instrumentation의 클린 기타 화이트리스트, tempo_rhythm의 16비트 뮤트 커팅,
+    production의 무왜곡·분리 지향이 여기서 나옴. DAYBREAK / 로맨틱펀치 아닌
+    롤러코스터 / 술탄 오브 더 디스코 쪽이 한국 펑크·시티팝·누디스코 축이라
+    vocal 항목을 선택적으로 열어두고 harmony의 레트로 소울 major 성향을 넣음.
+    Cory Wong은 대체로 인스트루멘털, DAYBREAK은 보컬곡이므로 이 프로필은
+    instrumental 모드와 vocal 모드 양쪽에서 동작해야 함.
+  genre_tags: [jazz, funk, jazz-funk, guitar, soul, city-pop, nu-disco, progressive rock]
+  # 이 프로필을 정의하는 아티스트 — 커버리지·실측 대조에 사용
+  match_artists: ["Cory Wong", "DAYBREAK", "Rollercoaster", "The Fearless Flyers"]

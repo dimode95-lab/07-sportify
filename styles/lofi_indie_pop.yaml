@@ -1,0 +1,109 @@
+# 로파이 인디팝 스타일 프로필
+# 근거: 좋아요한 검정치마 37곡 (6번째로 많이 들은 아티스트) + 인접 베드룸 인디 로스터
+# 상태: AI 초안 — 생성 결과를 듣고 사용자가 교정할 것
+
+name: lofi_indie_pop
+label: 로파이 인디팝 (검정치마 계열)
+
+identity: >-
+  Warm, hazy Korean bedroom indie pop where the recording sounds like a found
+  artifact rather than a clean document. Bright pop melody carried by a detached,
+  half-spoken male voice.
+
+instrumentation:
+  # 화이트리스트 — 여기 없는 악기는 쓰지 않는다
+  allow:
+    - drums (single-overhead-mic kit or cheap drum machine, tape-saturated, sitting behind the vocal)
+    - electric bass (round, flat-wound, played simply and slightly behind the beat)
+    - clean electric guitar (jangly, thin-stringed, slightly detuned against itself)
+    - second electric guitar (soft-edged, chorus-modulated, city-pop-ish voicings)
+    - male lead vocal (single, close-mic'd, mid-to-baritone)
+  # 곡에 따라 소량 허용
+  optional:
+    - cheap-preset synth or electric piano (thin, background pad or a single-note counter-line)
+    - shaker or tambourine, low in the mix and slightly off-grid
+    - one doubled vocal line at the octave, only on a final chorus
+  roles: >-
+    Guitars carry the harmony and the hooks; there is no keyboard bed holding the
+    song up. The first guitar strums or arpeggios full chords with the chorus
+    pedal audible, the second answers the vocal in the gaps with two- or
+    three-note phrases. Bass plays roots and simple passing tones without
+    filling. Drums are structural, not expressive - no fills that draw attention
+    to the kit.
+
+tempo_rhythm: >-
+  Relaxed, groove-aware mid tempo, roughly 88-112 BPM. Straight eighths with the
+  backbeat pushed a hair late, so the pocket feels loose rather than gridded.
+  Hi-hats are soft and smeared instead of ticking; the kick is round and
+  undercompressed. No programmed quantization tightness - human drift in the
+  timing is wanted, not corrected.
+
+harmony: >-
+  Major-key with a persistent melancholic tilt: maj7, add9, and m7 voicings in
+  the city-pop register, plus borrowed minor-iv and bVII chords that darken an
+  otherwise bright progression. Four- to six-chord loops that repeat rather than
+  develop, so the mood settles instead of climbing. Occasional unresolved
+  suspension held into the next bar.
+
+melody_hooks: >-
+  Simple, singable topline in a narrow range - the hook works because it is
+  repeated and easy, not because it is wide. Signature devices: a short jangly
+  guitar figure that opens the track and returns as a between-verse tag, a
+  vocal phrase that lands on a non-root chord tone, and a single sustained
+  guitar note or bent string as the emotional punctuation at section ends.
+
+dynamic_arc: >-
+  Bars 1-8: guitar figure alone, tape hiss and room noise audible before the
+  first note. Bars 9-24 verse: vocal enters with bass and brushed or machine
+  drums, everything at a low ceiling. Bars 25-32 pre-chorus: second guitar and
+  shaker enter, the only real lift in the song. Bars 33-48 chorus: full
+  arrangement, but only about 3-4 dB above the verse - the chorus is wider, not
+  louder. Bars 49-64 second verse: strip back to guitar, bass and vocal. Bars
+  65-80: instrumental break where the second guitar takes a short, unshowy solo
+  over the loop. Bars 81-96 final chorus with an octave vocal double, then let
+  the last 8 bars decay on the guitar loop rather than resolving cleanly.
+
+vocal: >-
+  Single male voice, mid-to-baritone, close-mic'd and dry. Laconic and
+  half-spoken - closer to talking on pitch than to singing out, with phrase ends
+  dropped rather than held. Emotionally withheld and almost flat in affect, which
+  is the point: the sentiment is in the lyric and the chords, not in the
+  delivery. No belting, no melisma, no vibrato, no rasp. Slight sibilance and
+  breath left in rather than de-essed away.
+
+production: >-
+  Deliberately imperfect as an aesthetic choice, not a polished band recording.
+  Warmth and haze come from tape-style saturation, gentle high-end roll-off above
+  roughly 10 kHz, and mild wow and flutter - not from large reverbs. Drums are
+  captured on a single overhead mic and saturated so the cymbals smear, then
+  placed lower than the vocal. Instruments bleed into each other instead of
+  occupying clean separated slots. Short slap or small-room ambience only; the
+  vocal stays dry and forward against a soft, slightly narrow instrumental bed.
+  Leave tape hiss, amp hum, and fret noise audible.
+
+constraints:
+  # Suno가 지시 없이 자기 습관대로 가는 것을 막는 부정 지시
+  - Do not use large hall or plate reverb washes - haze must come from tape and saturation, not from space.
+  - Do not use polished, wide, radio-loud mastering or heavy bus compression.
+  - Do not use a powerful, belted, or emotive vocal performance.
+  - Do not use quantized, gridded drums or trap-style programmed patterns.
+  - Do not use distorted lead guitar, orchestral strings, or brass.
+  - Do not make the chorus explode in volume - lift by width and density instead.
+
+grounding:
+  # 좋아요 데이터에서 관찰된 사실 (감이 아니라 근거)
+  liked_tracks: 37
+  core_era: 2019-2025   # 2019년 7곡, 2022년 12곡, 2025년 2곡 + 이전 카탈로그
+  median_duration_min: 4.3   # 범위 2.9-6.4
+  note: >-
+    검정치마 37곡으로 좋아요 6위 아티스트 - 이 프로필의 vocal(무심한 반말투
+    남성 보컬)과 production(의도적 로파이) 항목의 근거. 곡 길이 중앙값 4.3분,
+    범위 2.9~6.4분은 dynamic_arc의 96마디 구성(간주 solo 포함)의 근거.
+    인접 베드룸 인디 로스터 - THE SOLUTIONS 25곡, OOHYO 21곡, wave to earth
+    20곡, Yerin Baek 14곡, Sunset Rollercoaster 12곡, HYUKOH, 장범준 - 는
+    harmony의 시티팝 계열 보이싱과 instrumentation의 부드러운 클린 기타 톤을
+    정당화. Last.fm 태그의 mandopop/c-pop은 Sunset Rollercoaster에서 온
+    노이즈로 무시함.
+  genre_tags: [indie, indie pop, k-indie, rock, electronic]
+  # 이 프로필을 정의하는 아티스트 — 커버리지·실측 대조에 사용
+  match_artists: ["The Black Skirts", "wave to earth", "OOHYO"]

@@ -1,0 +1,91 @@
+# 페퍼톤스 스타일 프로필
+# 근거: 좋아요한 페퍼톤스 70곡 (17개 앨범, 2005~2024)
+# 상태: AI 초안 — 생성 결과를 듣고 사용자가 교정할 것
+
+name: peppertones
+label: 청량 기타팝 (페퍼톤스 계열)
+
+identity: >-
+  Bright and uplifting Korean indie guitar pop with youthful live-band energy.
+
+instrumentation:
+  # 화이트리스트 — 여기 없는 악기는 쓰지 않는다
+  allow:
+    - drums (tight, crisp, live-kit)
+    - electric bass (warm, melodic, active)
+    - acoustic guitar (rhythmic and emotional center)
+    - clean electric guitar (jangly, counter-melodies)
+    - male lead vocal (single, clear)
+  # 곡에 따라 소량 허용
+  optional:
+    - subtle synth pad or vintage keys (background only, never lead)
+    - handclaps or tambourine in choruses
+  roles: >-
+    Keep the acoustic guitar as the rhythmic and emotional center. Bass is not a
+    root-note anchor but a second melodic voice that moves constantly. Clean
+    electric guitar answers the vocal in the gaps with short jangly phrases,
+    never covering the vocal melody.
+
+tempo_rhythm: >-
+  Mid-to-uptempo with a strong forward drive, roughly 118-140 BPM. Straight
+  eighths with a light swing feel in the hi-hats. Drums are energetic but never
+  aggressive; tight and crisp rather than heavy or compressed.
+
+harmony: >-
+  Major-key brightness with a subtle bittersweet undertone. Sophisticated but
+  natural chord movement with tasteful extensions (maj7, add9, sus4) and
+  occasional borrowed chords from the parallel minor. Avoid simple three-chord
+  loops; the progression should keep moving rather than sit still.
+
+melody_hooks: >-
+  Memorable, singable topline with clear phrase structure. Guitar hooks are as
+  important as the vocal melody. Signature devices: a short guitar-harmonic
+  motif as an opening signal, jangly counter-melodies answering vocal phrases,
+  and an active melodic bass line that functions as a hook in its own right.
+
+dynamic_arc: >-
+  Begin intimate and small - a short instrumental motif, then acoustic guitar
+  with vocal alone. Introduce bass and drums to open the first section. Build
+  gradually and continuously into an energetic, wide, uplifting full-band
+  chorus. Keep a clear sense of arrival at the chorus rather than a flat
+  dynamic throughout. Longer arrangements may add an instrumental break where
+  guitars and bass trade melodic phrases before a final expanded chorus.
+
+vocal: >-
+  Clear, natural mid-range male voice. Sincere and unforced delivery - warm and
+  conversational rather than powerful or belted. Slight brightness in tone, no
+  heavy vibrato, no aggressive rasp.
+
+production: >-
+  Organic studio-band production with human timing and clear instrumental
+  separation. Moderate room ambience, controlled dynamics, warm analog-leaning
+  tone. Everything should sound like a real band playing together in a room,
+  not a stacked or heavily quantized production.
+
+constraints:
+  # Suno가 지시 없이 자기 습관대로 가는 것을 막는 부정 지시
+  - Do not use synth-heavy or EDM-style production.
+  - Do not use aggressive or distorted lead guitar tones.
+  - Do not use a female lead vocal or stacked vocal harmonies as the main voice.
+  - Do not use trap-style or programmed drum patterns.
+  - Do not flatten the dynamics - the chorus must feel bigger than the verse.
+
+grounding:
+  # 좋아요 데이터에서 관찰된 사실 (감이 아니라 근거)
+  liked_tracks: 70
+  albums: 17
+  core_era: 2008-2016   # 70곡 중 46곡(66%)이 이 시기
+  peak_albums:
+    - "Beginner's Luck (2012) - 11곡"
+    - "HIGH-FIVE (2014) - 12곡"
+    - "New Standard (2008) - 10곡"
+    - "Sounds Good! (2009) - 7곡"
+  median_duration_min: 4.2
+  note: >-
+    싱글 히트곡만이 아니라 앨범 수록곡을 폭넓게 좋아함(앨범당 7~12곡). 곡 길이
+    중앙값 4.2분에 5~8분대 곡(Viking 5:40, Black Universe 7:01, Furniture 6:50,
+    Night at the Safari 8:33)도 다수 - 짧고 간결한 팝보다 편곡이 전개되는 곡을
+    선호하는 경향. dynamic_arc의 instrumental break 항목은 이 관찰에 근거.
+  genre_tags: [k-indie, indie, rock, k-pop, pop]
+  # 이 프로필을 정의하는 아티스트 — 커버리지·실측 대조에 사용
+  match_artists: ["PEPPERTONES"]

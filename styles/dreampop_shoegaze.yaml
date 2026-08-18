@@ -1,0 +1,106 @@
+name: dreampop_shoegaze
+label: 한국형 드림팝/슈게이즈 (새소년·의미있는돌 계열)
+identity: >-
+  Contemporary Korean dream pop and shoegaze - hazy reverb-flooded guitars over
+  a tight, clearly articulated live rhythm section, with the vocal sitting
+  inside the haze rather than buried under it.
+instrumentation:
+  allow:
+    - drums (live kit, tight and dry-centered, played with clear articulation)
+    - electric bass (round, melodic, high in the mix, carries the song's motion)
+    - "electric guitar 1 (chord-bed: heavy reverb and chorus/tremolo, strummed
+      or arpeggiated so note attacks blur into a continuous wash)"
+    - "electric guitar 2 (line guitar: clean-to-lightly-overdriven single-note
+      figures and slow bends that float above the wash)"
+    - female or androgynous lead vocal (single, close-mic'd, mid-range)
+  optional:
+    - analog synth pad or organ drone (a sustained bed under the guitars, never
+      a lead voice)
+    - doubled vocal an octave or unison, low in the mix as texture only
+    - guitar feedback or e-bow sustain as a transitional swell
+  roles: >-
+    Guitar 1 never plays a hook; it exists to create a continuous harmonic fog
+    with long reverb tails and slow modulation, so individual pick attacks stop
+    being audible as events. Guitar 2 is the melodic counterweight and answers
+    the vocal in the gaps with short, bent, deliberately un-shredded phrases.
+    Bass and drums stay dry and forward relative to the guitars - they are the
+    reason the track has a floor to stand on, and they must remain legible even
+    at the densest point. Keep drums human and slightly loose in feel but never
+    washed in the same reverb as the guitars.
+tempo_rhythm: >-
+  Mid-tempo, roughly 88-125 BPM, with a patient, unhurried pulse. Straight
+  eighths; hi-hats and ride played evenly rather than syncopated. Drum parts are
+  simple and repetitive on purpose so the guitar texture can shift over a stable
+  grid. Allow long stretches of a single unchanging groove - two, four, even
+  eight bars of the same figure - and use a floor-tom or half-time shift, not a
+  fill-heavy transition, to move between sections.
+harmony: >-
+  Modal and slow-moving rather than functional. Two- to four-chord loops that
+  circle rather than resolve, often with a pedal tone held underneath while the
+  upper voices change. Minor and Dorian/Mixolydian colours with suspended and
+  add9 voicings left ringing on open strings; avoid clean cadences and avoid
+  resolving to the tonic at the end of every phrase. Occasional major-key
+  brightness that never fully commits, so the mood stays ambiguous rather than
+  sad or happy.
+melody_hooks: >-
+  Vocal melody is narrow in range, repetitive, and built from short phrases with
+  long silences between them - the space is part of the hook. The strongest hook
+  is often instrumental: a four-note guitar figure or a moving bass line that
+  repeats through an entire section and gets reharmonised underneath. Signature
+  devices: a bent or slid guitar note that arrives slightly behind the beat, a
+  bass line that walks upward against a static chord, and a single vocal phrase
+  repeated with increasing intensity instead of a new melody in the last
+  section.
+dynamic_arc: >-
+  Open with a bare loop - clean guitar figure or bass alone with reverb, no
+  drums, roughly eight bars. Bring in drums and the chord-bed guitar for the
+  first verse but keep the guitar wash low and the vocal dry and forward. Second
+  verse adds the second guitar and a synth or organ drone underneath. At the
+  chorus the reverb and modulation open wide and both guitars play together, the
+  vocal doubling low behind itself. After the second chorus, drop to near
+  silence - bass and one guitar only - then run a long instrumental build of at
+  least sixteen bars where the same loop repeats while guitars layer, the drums
+  move to a heavier open-hat or half-time feel, and the whole band arrives at a
+  sustained, saturated peak. End by letting that peak decay into feedback and
+  reverb tail rather than a clean stop. Do not rush this; the piece should feel
+  like it takes four to six minutes to travel this arc.
+vocal: >-
+  Breathy, unforced female or androgynous mid-range voice, sung close to the mic
+  with visible air in the tone. Delivery is calm and almost spoken at the low
+  end of the range, opening into a fuller but still restrained tone in the
+  choruses. Never belted, never vibrato-heavy. Placed inside the reverb field
+  with the guitars but kept intelligible - the words should be audible, softened
+  rather than obscured.
+production: >-
+  Wide stereo guitar field with long plate and hall reverbs and slow chorus or
+  tremolo modulation; bass and kick kept dry and centred so the low end stays
+  defined under the wash. Moderate tape-style saturation on the guitar bus at
+  the loudest sections. Preserve dynamic range - the quiet openings must be
+  genuinely quiet. Analog-leaning warmth, live-room ambience on the drums, no
+  hyper-polished modern loudness.
+constraints:
+  - Do not bury the lead vocal under the guitars - it stays present and
+    intelligible throughout.
+  - Do not use programmed, trap, or four-on-the-floor electronic drums; the kit
+    is live and human.
+  - Do not use 90s British shoegaze production cliches like pitch-warbled
+    tremolo-picked walls with no visible rhythm section.
+  - Do not use fast chord changes, functional pop progressions, or a bright
+    major-key resolution at every phrase end.
+  - Do not use guitar solos with shredding, tapping, or blues-rock phrasing.
+  - Do not compress everything to one level - the instrumental build must arrive
+    noticeably louder and wider than the opening.
+grounding:
+  liked_tracks: 359
+  core_era: 2021-2026
+  median_duration_min: 4.1
+  note: >-
+    좋아요 359곡의 상위 아티스트가 의미있는 돌, 새소년, SURL, 부둥, Attic Ocean 등 거의 전부 2020년대
+    한국 밴드라, 90년대 영국 슈게이즈가 아니라 리듬 섹션이 또렷하고 보컬이 믹스 앞에 나오는 동시대 한국식 사운드로
+    잡았다 - vocal과 production, constraints의 "보컬을 묻지 말 것" 조항이 여기서 나온다. post-rock(45)과
+    psychedelic(30) 동시 태그, 그리고 중앙값 4.1분에 최대 35분까지 뻗는 러닝타임 분포가 dynamic_arc의 긴
+    인스트루멘탈 빌드와 harmony의 모달·페달톤 루프를 정당화한다. 여성/중성적 보컬 아티스트(의미있는 돌, 새소년
+    황소윤, 신해경 계열)가 상위에 몰려 있어 보컬 성별을 여성/중성으로 고정했다.
+  genre_tags: [dream pop, shoegaze, k-indie, indie rock, post-rock, psychedelic]
+  # 이 프로필을 정의하는 아티스트 — 커버리지·실측 대조에 사용
+  match_artists: ["Meaningful Stone", "SE SO NEON", "SURL", "Budung", "BASEMENTZEROFLOOR", "Attic Ocean", "Shin Hae Gyeong"]

@@ -1,0 +1,123 @@
+# 실험적 사이키델릭 / 일렉트로닉 밴드 스타일 프로필
+# 근거: 좋아요한 실리카겔 35곡 + 일렉트로닉/신스팝 클러스터 310곡
+# 상태: AI 초안 — 생성 결과를 듣고 사용자가 교정할 것
+
+name: experimental_psych
+label: 실험적 사이키델릭 밴드 (실리카겔 계열)
+
+identity: >-
+  A live band that plays electronic music - krautrock repetition, shoegaze
+  texture and synth programming welded into one track that changes identity
+  partway through rather than resolving into a chorus.
+
+instrumentation:
+  # 화이트리스트 — 여기 없는 악기는 쓰지 않는다
+  allow:
+    - drums (live kit, motorik straight-eighth pattern, dry and close-miked)
+    - electric bass (fuzz-edged, single repeating figure held for long stretches)
+    - electric guitar (through modulated filter, phaser and tape delay)
+    - second electric guitar (drone or reverse-swelled texture layer)
+    - analog synth lead (mono, portamento, detuned saw)
+    - analog synth bass / arpeggiator (16th-note sequenced)
+    - lead vocal (male or female, processed, alternating Korean and English)
+  # 곡에 따라 소량 허용
+  optional:
+    - drum machine layered under the live kit (techno-leaning kick and closed hat)
+    - white-noise sweep or tape-stop as a section marker
+    - vocoded or pitch-shifted backing vocal (texture, not harmony)
+  roles: >-
+    The drums and bass hold one unchanging figure so the movement comes entirely
+    from what is layered over it. Guitar is a texture generator, not a riff
+    machine: the same phrase re-enters pitch-shifted a fourth up, or panned hard
+    and delayed against itself. Synths are structural, not decorative - the
+    arpeggiator can replace the guitar entirely for a whole section. Vocals sit
+    inside the mix at the level of another instrument.
+
+tempo_rhythm: >-
+  Roughly 120-138 BPM, straight eighths with no swing, hi-hat locked on the
+  offbeat for a motorik pulse that stays flat for 16-32 bars at a time. Allow at
+  least one mid-track tempo or feel shift - either a half-time drop where the
+  kick moves to beats 1 and 3, or an acceleration into a double-time outro. Fill
+  as little as possible; the groove should feel machine-steady even when played
+  by hand.
+
+harmony: >-
+  Modal and static rather than functional - hold one chord or a two-chord
+  oscillation (i to bVII, or a dorian i to IV) for extended passages so tension
+  comes from texture rather than progression. Suspended and quartal voicings
+  over a pedal bass. When a change does happen it should be abrupt: drop a
+  whole step or shift to an unrelated key at the section boundary with no pivot
+  chord or transition.
+
+melody_hooks: >-
+  The hook is a repeated instrumental figure, not a sung chorus - a four-note
+  synth arpeggio or a guitar motif that survives across sections while
+  everything around it is replaced. Vocal melody is narrow-range and chant-like,
+  repeating a short phrase rather than arcing. Signature devices: a motif
+  restated an octave down on synth bass, a guitar line doubled by vocoder, and
+  a figure that returns at the end of the track stripped to one instrument.
+
+dynamic_arc: >-
+  Bars 1-8: single guitar or synth figure alone, dry, no drums. Bars 9-24: drums
+  and bass enter and lock the motorik groove; first vocal section over the
+  unchanging pulse. Bars 25-32: build by layering only - add arpeggiator, add
+  second guitar drone, no chord change. At bar 33 cut everything abruptly for a
+  synth breakdown at a different feel - drums drop out or go half-time, texture
+  becomes electronic and cold, vocal is filtered or absent. Bars 49-64: the band
+  re-enters at higher intensity with guitars distorted into noise, the earlier
+  motif now transposed. Extended versions insert a 32-64 bar drone or jam
+  section here where one chord is held and texture slowly saturates. Final 8-16
+  bars: strip back to the opening figure alone and let it decay or tape-stop.
+  Never restate an earlier section identically.
+
+vocal: >-
+  Treated as one instrument among many, mixed level with the guitars rather than
+  in front of them. Alternates between Korean and English lines within the same
+  song. Delivery is deadpan and close-miked, half-spoken in verses, more
+  strained and shouted when the noise section arrives. Always processed - light
+  distortion, telephone-band filtering, slap delay or pitch-shifted doubling.
+  No clean pop-polished lead, no belted power notes, no smooth vibrato.
+
+production: >-
+  Live band tracking with electronic production integrated at the same level as
+  the instruments. Wide stereo field with hard-panned guitars and modulation
+  sweeping across it. Analog tape saturation and spring or plate reverb on
+  drums; synths clean and modern by contrast. Allow deliberate noise, feedback
+  and clipping as arrangement elements. Sections should sound like they were
+  mixed differently from one another - a filtered lo-fi passage next to a wide
+  full-range one.
+
+constraints:
+  # Suno가 지시 없이 자기 습관대로 가는 것을 막는 부정 지시
+  - Do not use a verse-chorus-verse-chorus pop structure or repeat a chorus identically.
+  - Do not treat synths as decoration over a rock band - they must carry whole sections alone.
+  - Do not use acoustic guitar, piano, strings, brass or any orchestral instrument.
+  - Do not push the vocal forward as the focal point or use clean untreated lead vocals.
+  - Do not smooth the transitions - section changes must be abrupt and unprepared.
+  - Do not use trap hi-hats, EDM build-and-drop formulas or a four-on-the-floor club beat throughout.
+
+grounding:
+  # 좋아요 데이터에서 관찰된 사실 (감이 아니라 근거)
+  liked_tracks: 35
+  core_era: 2018-2024
+  median_duration_min: 4.2
+  cluster_size: 310   # 일렉트로닉+신스팝 클러스터 전체
+  neighbor_artists:
+    - "OOHYO - 21곡"
+    - "Radiohead - 18곡"
+    - "Sunset Rollercoaster 落日飛車 - 12곡"
+    - "PPCX - 11곡"
+    - "IDIOTAPE - 8곡"
+  note: >-
+    실리카겔 35곡으로 전체 4,512곡 중 8번째로 많이 들은 아티스트. 곡 길이
+    중앙값은 4.2분이지만 범위가 1.1~18.4분으로 극단적으로 넓음 - 18.4분짜리를
+    좋아한다는 건 짧은 팝 구조가 아니라 전개가 길게 늘어지는 곡을 견딜 뿐
+    아니라 선호한다는 뜻이고, dynamic_arc의 32~64마디 드론/잼 구간과
+    constraints의 "verse-chorus 구조 금지" 항목이 여기 근거. 같은 클러스터에
+    Radiohead 18곡, IDIOTAPE 8곡이 있고 공통 장르 태그에 techno 20곡, idm
+    19곡이 붙어 있음 - 밴드에 신스를 얹은 게 아니라 일렉트로닉 텍스처가 밴드와
+    동급으로 들어가야 한다는 뜻이며 instrumentation의 신스 항목들과 roles의
+    "arpeggiator can replace the guitar entirely" 지시가 이 관찰에 근거.
+  genre_tags: [synthpop, futurepop, indie, k-indie, alternative rock, techno, idm]
+  # 이 프로필을 정의하는 아티스트 — 커버리지·실측 대조에 사용
+  match_artists: ["Silica Gel", "IDIOTAPE"]

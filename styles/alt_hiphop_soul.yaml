@@ -1,0 +1,90 @@
+name: alt_hiphop_soul
+label: 재지 소울 얼터너티브 힙합 (맥 밀러 / 자이언티 / 빈지노 계열)
+identity: >-
+  Warm, introspective alternative hip-hop built on live-played jazz and soul
+  instrumentation. A conversational rapper and a soulful sung hook share the
+  same track over dusty, hand-played drums and Rhodes-centered harmony.
+  Melancholic but comfortable - late-night, room-lit, unhurried.
+instrumentation:
+  allow:
+    - drums (dusty acoustic kit, loose and hand-played, soft round kick, brushed or lightly damped snare)
+    - electric bass (fingered, warm and round, walking or syncopated - a melodic voice)
+    - Rhodes electric piano (harmonic center, soft tremolo)
+    - clean electric guitar (muted jazz-chord comping or short single-note licks)
+    - male lead vocal (rapping, conversational mid-range)
+    - male sung hook vocal (soulful, slightly breathy)
+  optional:
+    - upright bass (in place of electric bass on sparser sections)
+    - muted trumpet or tenor sax (short answering phrase, never a full solo section)
+    - background vocal stacks (thirds and sixths, hook only)
+    - vinyl crackle and tape hiss (bed layer, low in the mix)
+    - subtle analog synth bass reinforcing the low end under the chorus
+  roles: >-
+    Rhodes carries the harmony and defines the mood; it comps in loose,
+    off-the-grid chunks rather than sustained pads. Bass is a second melodic
+    line that moves against the vocal, not a root-note anchor locked to the
+    kick. Drums stay in the background as texture and pocket - they never
+    become the hook. Guitar and horn fill only the gaps at the ends of vocal
+    phrases. The sung hook vocal takes the melodic lead; the rap vocal takes
+    the rhythmic lead. They never compete in the same bar.
+tempo_rhythm: >-
+  Relaxed head-nod tempo, roughly 78-92 BPM, boom-bap derived. Drums sit a few
+  milliseconds behind the grid with audible human drift - hi-hats and ghost
+  snares are unquantized and vary in velocity. Straight eighths with a light
+  swing on the sixteenths. Kick pattern is sparse and syncopated, leaving the
+  backbeat open. Occasional half-time feel under the hook.
+harmony: >-
+  Jazz and neo-soul harmony throughout: maj7, min9, 11th and 13th voicings,
+  frequent ii-V movement and chromatic passing chords. Minor-key or modal
+  center with warm major-seventh resolutions. Rootless, close voicings in the
+  Rhodes so the bass owns the bottom. Loop-based but with a real turnaround
+  rather than a static two-bar cycle.
+melody_hooks: >-
+  The sung hook is short, memorable, and sits in a comfortable mid-range - four
+  to six words repeated with small melodic variations. The Rhodes states a
+  three or four note motif in the intro that returns between verses. Rap
+  sections lean melodic and half-sung at phrase endings, blurring into the
+  hook.
+dynamic_arc: >-
+  Open with 4-8 bars of Rhodes and vinyl crackle alone, no drums. Bring in
+  bass, then drums, to start the first verse. Strip the drums out for the last
+  two bars before the hook so the hook lands on a lift. Second verse adds
+  guitar comping and light background vocals. After the final hook, drop to
+  Rhodes and a single held bass note for an outro tag - fade on the motif from
+  the intro rather than a hard stop.
+vocal: >-
+  Two connected voices from the same warm male mid-range. Rap delivery is
+  conversational, laid-back and slightly behind the beat, low-key and
+  unforced - spoken more than shouted, with a soft tone and audible breath.
+  Sung hooks are soulful and slightly breathy with natural vibrato and light
+  R&B melisma. Doubles and harmony stacks only on the hook. Any pitch
+  correction is subtle and transparent, never a stylistic effect.
+production: >-
+  Analog, lo-fi-adjacent warmth: tape saturation, gentle high-end roll-off,
+  and a slightly filtered low-mid heavy balance. Instruments are recorded in a
+  real room with audible bleed and short natural decay. Vocals sit close and
+  dry with a short plate tail. Mix is soft-clipped rather than brickwalled;
+  transients stay round and dynamics breathe.
+constraints:
+  - Do not use trap production - no 808 slides, no rapid triplet hi-hat rolls, no rattling snare rushes.
+  - Do not use heavy autotune, aggressive shouted delivery, or ad-lib spam.
+  - Do not add EDM builds, risers, white-noise sweeps, or drops.
+  - Do not quantize the drums to a rigid grid or use a clean modern pop mix.
+  - Do not let synth pads or lead synths replace the Rhodes as the harmonic center.
+  - Do not push the tempo above 95 BPM or make the track feel urgent.
+grounding:
+  liked_tracks: 477
+  core_era: 2015-2026
+  median_duration_min: 3.6
+  note: >-
+    힙합 태그 477곡의 중심은 메인스트림 트랩이 아니라 재지/소울 계열이다. 동시 출현
+    장르에서 r&b(122), soul(35), alternative rnb(19), lo-fi(19)가 강하게 붙고,
+    underground hip-hop(37)이 뒤를 받친다. 상위 아티스트인 Mac Miller(32,
+    Swimming/Circles의 라이브 연주 기반), Zion.T(19, 한국 네오소울), Beenzino(12,
+    재즈 붐뱁), Joji(17, 멜랑콜릭 베드룸 R&B), Bassagong(30)이 하나의 축을 이룬다.
+    이 데이터가 instrumentation의 로즈/핑거드 베이스 화이트리스트, 78-92 BPM의
+    tempo_rhythm, 재즈 확장화음 harmony, 랩과 노래 훅을 함께 다루는 vocal, 그리고
+    트랩 요소를 배제하는 constraints를 정당화한다.
+  genre_tags: [hip-hop, r&b, soul, alternative rnb, underground hip-hop, lo-fi, k-hip-hop]
+  # 이 프로필을 정의하는 아티스트 — 커버리지·실측 대조에 사용
+  match_artists: ["Mac Miller", "Bassagong", "Zion.T", "Joji", "Beenzino", "Kid Milli", "Nochang"]

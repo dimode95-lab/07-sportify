@@ -1,0 +1,121 @@
+# 어쿠스틱 싱어송라이터 스타일 프로필
+# 근거: 좋아요한 4,512곡 중 singer-songwriter 태그 292곡
+# 상태: AI 초안 — 생성 결과를 듣고 사용자가 교정할 것
+
+name: singer_songwriter
+label: 어쿠스틱 싱어송라이터 (적재 / 백예린 / John Mayer 계열)
+
+identity: >-
+  Contemporary acoustic singer-songwriter music built around a real guitar
+  player, not just a songwriter with a guitar. Sparse, vocal-forward
+  arrangements with neo-soul harmonic color and a quiet, close, room-sized
+  emotional register.
+
+instrumentation:
+  # 화이트리스트 — 여기 없는 악기는 쓰지 않는다
+  allow:
+    - acoustic guitar (fingerstyle, thumb-driven bass notes, close-miked with audible string squeaks and fret noise)
+    - lead vocal (single voice, recorded near the mic with breath and lip noise left in)
+    - electric bass (fretted or fretless, round and soft-attacked, sitting under the guitar rather than driving it)
+    - drums or light percussion (brushes, rim clicks, soft mallets, ghost-note snare - played quietly with sticks well below the vocal)
+    - clean electric guitar (played with fingers, no pick attack; short bluesy or soul-inflected fills answering the vocal)
+  # 곡에 따라 소량 허용
+  optional:
+    - Rhodes or upright piano (sustained voicings under the acoustic, never doubling the melody)
+    - single low string pad or cello line (entering only in the last section)
+    - one layer of the same singer's own harmony (a third or fifth, mixed clearly below the lead)
+  roles: >-
+    The acoustic guitar carries both the groove and the harmony; the thumb plays
+    a walking or alternating bass figure while the fingers voice the upper
+    extensions, so the arrangement stays complete even with nothing else
+    playing. The lead vocal is always the loudest and closest element. Bass and
+    drums enter to support the pocket, never to add power. The clean electric
+    speaks only in the two-to-four-beat gaps between vocal phrases, then stops.
+
+tempo_rhythm: >-
+  Relaxed to mid tempo, roughly 68-96 BPM. Groove-aware rather than strummed:
+  a laid-back pocket where the vocal and guitar sit slightly behind the beat.
+  Sixteenth-note fingerpicking or a soft neo-soul backbeat with the snare
+  brushed or rimmed rather than hit. Human timing with audible push and pull -
+  no grid-locked quantization. Ballad-leaning material may drop to rubato with
+  no drums at all.
+
+harmony: >-
+  Jazz-inflected and harmonically rich rather than three-chord folk. Extended
+  and altered voicings throughout - maj7, m9, 11, 13, sus2, add9, slash chords
+  with a moving bass line, and secondary dominants that pull between related
+  keys. Frequent modal interchange gives a bittersweet major-minor ambiguity.
+  Voicings favor open strings ringing against fretted upper extensions in the
+  guitar's middle register.
+
+melody_hooks: >-
+  Conversational, speech-shaped topline that lands on the ninth or the sixth of
+  the chord rather than the root. Phrases start off-beat and leave long rests
+  where the guitar answers. The hook is a guitar figure and a vocal phrase
+  arriving together - a repeated fingerstyle motif that returns unchanged each
+  chorus while the vocal shifts around it. Blues- and soul-derived melodic
+  ornaments (slides, grace notes, small bends) used sparingly at phrase ends.
+
+dynamic_arc: >-
+  Open with solo acoustic guitar alone for four to eight bars, then the vocal
+  enters over guitar only. Hold that duo texture through the entire first verse.
+  Bass fades in under the pre-chorus; brushed drums arrive at the first chorus
+  but stay quiet. Second verse pulls the drums back out or reduces them to rim
+  clicks. After the second chorus, a short instrumental passage where the clean
+  electric or the acoustic plays a melodic solo over the full rhythm section.
+  The final chorus adds the one optional harmony layer and the pad, then strips
+  back to guitar and voice for the last two lines and ends. Total range from
+  quietest to loudest stays narrow - the last chorus is fuller in texture, not
+  louder in volume.
+
+vocal: >-
+  Single lead voice in a comfortable mid register, male or female both work
+  equally - do not change the arrangement to suit either. Soft-attacked and
+  slightly breathy, sung near the microphone at conversational volume with
+  breaths, consonant noise, and small pitch slides left audible. Light R&B
+  phrasing: melisma of two or three notes at most, delivered with restraint.
+  Falsetto or head voice for the highest phrases rather than pushed chest
+  belting. No heavy vibrato, no rasp, no gospel-scale runs.
+
+production: >-
+  Small warm room with short natural decay, not a hall or plate. Acoustic guitar
+  close-miked with a second ambient mic blended low. Vocal dry and forward with
+  a short slap or plate tail well behind it. Analog-leaning warmth, gentle
+  compression that preserves the difference between a whispered line and a sung
+  one. Wide separation with the guitar spread across the stereo field and the
+  vocal centered. Everything sounds like a small group playing together in one
+  take.
+
+constraints:
+  # Suno가 지시 없이 자기 습관대로 가는 것을 막는 부정 지시
+  - Do not use strummed open-chord folk-pop patterns or a four-on-the-floor kick.
+  - Do not build to a loud anthemic band chorus with crash cymbals and distorted guitar.
+  - Do not use synth pads, arpeggiators, programmed trap hi-hats, or 808 bass.
+  - Do not stack multi-part vocal harmonies or choir layers over the lead.
+  - Do not over-compress or brickwall the mix - the quiet passages must stay quiet.
+  - Do not sing with belted, high-pressure, competition-show delivery.
+
+grounding:
+  # 좋아요 데이터에서 관찰된 사실 (감이 아니라 근거)
+  liked_tracks: 292
+  core_era: 2021-2026   # 최근작 편중, 2025년 51곡이 최다
+  median_duration_min: 3.7
+  duration_range_min: [1.9, 11.9]
+  top_artists:
+    - "Whys Young (19)"
+    - "IT'S (15) / Cloud koh (15) / KIK (15) / 적재 Jukjae (15) / Samui (15)"
+    - "verycoybunny (14) / John Mayer (14) / 백예린 Yerin Baek (14)"
+    - "Budung (13) / 하현상 Ha Hyun Sang (13)"
+    - "권진아 Kwon Jin Ah (8)"
+  note: >-
+    상위 아티스트가 '작곡가'보다 '연주자' 쪽으로 쏠려 있음 - 적재와 John Mayer가
+    동시에 상위권에 있다는 점이 핵심 근거로, instrumentation에서 핑거스타일과
+    엄지 베이스 주법을 명시하고 harmony에서 재즈적 확장 보이싱을 요구한 이유다.
+    r&b(30) 동시 태그와 백예린/적재의 비중은 neo-soul 성향을 뒷받침하며
+    tempo_rhythm의 뒤로 눕는 그루브와 vocal의 절제된 멜리스마 지시로 반영했다.
+    folk(36)/ballad(35)는 조용한 쪽 극단을, indie(149)/k-indie(100)는 밴드가
+    아닌 소편성 기조를 지지한다. 남녀 보컬이 함께 상위권이라 vocal은 성별을
+    고정하지 않았다. 중앙값 3.7분은 dynamic_arc를 한 번의 짧은 간주로 제한한 근거.
+  genre_tags: [singer-songwriter, indie, k-indie, folk, ballad, acoustic, r&b, indie pop]
+  # 이 프로필을 정의하는 아티스트 — 커버리지·실측 대조에 사용
+  match_artists: ["Jukjae", "Yerin Baek", "Ha Hyun Sang", "Cloud koh", "Kwon Jin Ah", "John Mayer", "Samui"]

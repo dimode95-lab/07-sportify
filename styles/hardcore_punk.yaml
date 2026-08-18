@@ -1,0 +1,130 @@
+# 한국 멜로딕 하드코어/펑크 스타일 프로필
+# 근거: 기존 10개 프로필로 커버되지 않은 곡들의 장르 태그 클러스터 (hardcore 33곡)
+# 상태: AI 초안 — 생성 결과를 듣고 사용자가 교정할 것
+
+name: hardcore_punk
+label: 멜로딕 하드코어/펑크 (SKIPJACK 계열)
+
+identity: >-
+  Korean melodic hardcore with punk speed and metalcore edges - downpicked
+  driving riffs under screamed verses that hand off to a genuinely singable
+  clean-sung chorus, gang vocals on the hook, and exactly one breakdown. Fast
+  and heavy, but built around melody rather than brutality.
+
+instrumentation:
+  # 화이트리스트 — 여기 없는 악기는 쓰지 않는다
+  allow:
+    - drums (fast punk kit; driving kick, cracking snare, ride and crash-heavy)
+    - electric bass (distorted pick-played, doubling the guitar rhythm)
+    - rhythm electric guitar (palm-muted downpicked, high-gain, drop-D or drop-C)
+    - lead electric guitar (octave and single-note melodic lines over the rhythm)
+    - male lead vocal (single voice, screamed and clean-sung in the same song)
+    - gang vocals (unison shouted group, chorus and final section only)
+  # 곡에 따라 소량 허용
+  optional:
+    - second clean-sung vocal doubling the chorus an octave up
+    - pinch harmonic or feedback squeal as a 1-beat section marker
+    - brief clean guitar arpeggio (bridge only, maximum 8 bars)
+  roles: >-
+    Rhythm guitar and bass play the same downpicked eighth-note figure locked to
+    the kick, with no sustained open chords until the breakdown. Lead guitar sits
+    above it playing octave-shape melodic lines that state the chorus topline
+    before the voice does - this melodic lead is what separates the style from
+    straight hardcore. Drums drive on the ride through verses and move to crash
+    accents on every chorus downbeat. Gang vocals are a texture, not a lead;
+    they enter only on the hook line and never carry a verse.
+
+tempo_rhythm: >-
+  Fast, roughly 160-190 BPM, sitting on straight eighths with a hard-charging
+  forward lean. Verses run a d-beat or driving punk two-beat with the snare on
+  the backbeat and the kick tracking the guitar downpicking. Choruses open up to
+  full-kit eighths with crash on every downbeat. One half-time breakdown late in
+  the song, roughly half the verse tempo, with the guitar rhythm chopped into
+  syncopated bursts against silence. No blast beats, no double-bass gallop
+  throughout - double kick only in short 2-bar fills.
+
+harmony: >-
+  Natural minor with frequent shifts to the relative major for the chorus lift.
+  Riffs are power chords and open fifths on the low strings, moving in fast
+  four-chord punk cycles rather than static single-note grooves. Chorus harmony
+  is genuinely melodic - clear I-V-vi-IV-shaped movement under the sung line,
+  often with a suspended fourth held over the final chord. Breakdown drops to a
+  single low root with a minor-second neighbor tone for tension.
+
+melody_hooks: >-
+  The chorus must be a real singable topline, wide-intervalled enough to cut
+  through distortion, and it should be the loudest melodic idea in the song.
+  Signature devices: a lead guitar octave line that previews the chorus melody
+  in the intro; a single shouted gang-vocal phrase repeated as the title hook;
+  a screamed verse line that returns clean-sung in the final chorus. Verses are
+  rhythmic and pitchless by comparison, existing to set up the chorus release.
+
+dynamic_arc: >-
+  Open with 4 bars of lead guitar octave melody over drums only, no distortion
+  bed. Full band lands on bar 5 for a 4-bar riff statement at full weight.
+  Verse 1 (16 bars) is downpicked rhythm guitar with screamed vocal, drums on
+  the ride, bass locked to the guitar. Pre-chorus (8 bars) cuts the guitar to
+  offbeat stabs and pushes the vocal from scream toward a strained half-sung
+  tone. Chorus 1 (16 bars) is full open-chord width with clean-sung lead vocal
+  and gang vocals doubling the last 4 bars. Verse 2 (12 bars) returns screamed
+  but keeps the lead guitar melody underneath. Chorus 2 (16 bars) repeats.
+  Breakdown (16 bars) drops to half time, guitars chugging in syncopated bursts
+  with 2 bars of near-silence before the last hit. Final chorus (16 bars,
+  repeated) is clean-sung with full gang vocals throughout and the lead guitar
+  playing the melody in unison. End on one sustained crash and let it ring out.
+
+vocal: >-
+  Korean-language male voice alternating two clearly distinct registers within
+  the same song. Verses: mid-range throaty hardcore scream, articulate and
+  shouted rather than guttural, consonants hard and rhythmically tight. Choruses:
+  fully clean melodic singing, slightly strained and raw at the top of the range,
+  earnest and anthemic rather than polished. The switch between the two must be
+  audible and abrupt at section boundaries - never blended or half-screamed
+  across a whole section. Gang vocals are unison shouted, several voices, not
+  harmonized. No death-metal growls, no pig squeals, no auto-tune.
+
+production: >-
+  Loud, tight, modern hardcore production with a real-band feel. Rhythm guitars
+  double-tracked and hard-panned left and right, lead melody centered above them.
+  Kick clicky and forward so the downpicking stays legible at speed, snare bright
+  and cracking. Bass distorted and audible as grit rather than as a separate
+  melodic voice. Clean vocal dry and centered, screamed vocal slightly wider with
+  short room. Energetic and compressed, but performances stay human and slightly
+  ahead of the beat rather than grid-locked.
+
+constraints:
+  # Suno가 지시 없이 자기 습관대로 가는 것을 막는 부정 지시
+  - Do not scream through the chorus - the chorus is clean-sung, every time.
+  - Do not use blast beats, constant double-bass, or thrash tremolo picking.
+  - Do not use guttural deathcore growls or unintelligible low-register vocals.
+  - Do not use synths, orchestral strings, breakdowns stacked more than once, or an EDM drop.
+  - Do not use a female lead vocal or polished pop-punk gloss on the production.
+  - Do not slow to mid-tempo groove or hip-hop phrasing; this is fast punk-derived rhythm throughout.
+
+grounding:
+  # 좋아요 데이터에서 관찰된 사실 (감이 아니라 근거)
+  liked_tracks: 33
+  core_era: 2018-2024
+  median_duration_min: 3.1
+  note: >-
+    이 프로필은 기존 10개 프로필 어디에도 매칭되지 않은 곡들을 모아 발견한
+    커버리지 갭이다. 미커버 장르 태그가 hardcore(33) · punk rock(18) ·
+    pop punk(16) · metalcore(16) · melodic(15) · deathcore(14) ·
+    melodic hardcore(13) · hard rock(11)로 뚜렷하게 뭉친다. 미커버 아티스트
+    1위는 한국 밴드 SKIPJACK(15곡)이고 DECADENT(5), MOONSUN(5), POSER(2),
+    Lilly Eat Machine(2)이 뒤따른다 — 그래서 identity를 영미 하드코어가 아닌
+    한국 멜로딕 하드코어에 두고 vocal을 한국어로 지정했다. 핵심은
+    melodic(15)·melodic hardcore(13)가 deathcore(14)·metalcore(16)와
+    공존한다는 점으로, 순수 브루탈이 아니라 기타에 멜로디가 있고 클린 코러스가
+    있는 쪽이다. vocal의 스크림/클린 레지스터 분리, melody_hooks의 노래 가능한
+    코러스, instrumentation의 lead guitar 옥타브 라인은 모두 이 태그 혼합에
+    근거한다. deathcore·metalcore 태그는 dynamic_arc의 브레이크다운 1회와
+    하프타임 구간으로만 반영했고, constraints에서 블래스트 비트·그로울을 막아
+    극단 쪽으로 쏠리지 않게 눌렀다. 라이브러리 나머지가 멜로딕한 한국 인디/록
+    (The Volunteers, 크라잉넛, Xdinary Heroes 24곡, BABYMETAL 6곡,
+    ONE OK ROCK 5곡, Paledusk) 위주라는 점도 앤섬 쪽 가중치의 근거다.
+    프로젝트 내 프로필 중 가장 빠르고 무거우며, kr_rock_2000s(다운튜닝 그루브·
+    미드템포·힙합 프레이징)와는 템포와 리듬 DNA에서 명확히 구분된다.
+  genre_tags: [hardcore, punk rock, pop punk, metalcore, melodic hardcore, deathcore, hard rock]
+  # 이 프로필을 정의하는 아티스트 — 커버리지·실측 대조에 사용
+  match_artists: ["SKIPJACK", "DECADENT", "POSER"]

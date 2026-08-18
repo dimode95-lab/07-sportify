@@ -1,0 +1,115 @@
+# 서태지 계열 2000년대 한국 얼터너티브/누메탈 스타일 프로필
+# 근거: 좋아요한 서태지 42곡 (좋아요 아티스트 4위), 2000/2004년 집중
+# 상태: AI 초안 — 생성 결과를 듣고 사용자가 교정할 것
+
+name: kr_rock_2000s
+label: 2000년대 한국 얼터너티브/누메탈 (서태지 계열)
+
+identity: >-
+  Korean-language nu-metal and alternative metal built on downtuned seven-string
+  riffs, whisper-to-scream vocal contrast, and hip-hop-inflected rhythmic
+  phrasing - heavy in the Korn/Deftones/Rage Against the Machine lineage but
+  carrying a strong sung melodic hook through the weight.
+
+instrumentation:
+  # 화이트리스트 — 여기 없는 악기는 쓰지 않는다
+  allow:
+    - drums (large, hard-hitting kit; deep kick, wide snare, ride-heavy)
+    - 5-string electric bass (distorted, locked to the guitar riff)
+    - downtuned 7-string electric guitar (drop-tuned, thick palm-muted distortion)
+    - clean or chorused electric guitar (verse-only, thin and dry)
+    - male lead vocal (single voice, whisper to scream range)
+  # 곡에 따라 소량 허용
+  optional:
+    - industrial/electronic texture (filtered noise, sampled loop, sub drone) as a bed, never a lead line
+    - turntable scratch or spoken sample as a short punctuation between sections
+    - stacked shouted backing vocal on the chorus hook only
+  roles: >-
+    The riff is the song. Guitar and bass play the same muted single-note figure
+    in unison, low and rhythmic, deliberately leaving the upper midrange empty so
+    the vocal owns it. Drums are a third riff instrument - kick pattern tracks the
+    guitar rhythm rather than keeping generic time. Clean guitar exists only to
+    hollow out verses; when distortion enters, the clean part stops entirely.
+    Electronic elements sit underneath as atmosphere and never carry melody.
+
+tempo_rhythm: >-
+  Roughly 88-140 BPM, with the heavy center of gravity around 95-120 where the
+  riff feels dragged and physical rather than fast. Syncopated, off-beat riff
+  accents in the hip-hop sense - the groove pushes and pulls against the
+  downbeat rather than sitting on straight eighths. Half-time drop under the
+  chorus or bridge for weight. Occasional double-time punk-speed section for
+  contrast, but never thrash blast-beats.
+
+harmony: >-
+  Minimal and modal rather than functional. Riffs are single-note lines and open
+  fifths built on the low root, with tritone and minor-second neighbor tones for
+  tension; full triads are rare. Natural minor and Phrygian coloring. Chorus
+  lifts by moving the whole riff shape up a minor third or fourth rather than by
+  changing chord quality. Clean verse sections may use a suspended two-chord
+  loop with an unresolved held note above it.
+
+melody_hooks: >-
+  Despite the weight, the chorus carries a genuinely singable Korean-language
+  topline - long sustained vowels over the riff, wide enough intervals to cut
+  through distortion. Verses trade this for rhythmic near-spoken delivery packed
+  into short bursts. Signature devices: a bent, pinch-harmonic guitar squeal as a
+  section marker; a two-bar riff figure repeated until it becomes the hook
+  itself; a whispered or half-sung pre-chorus line that returns screamed later.
+
+dynamic_arc: >-
+  Open with 4 bars of atmosphere alone - electronic drone or a single clean
+  guitar figure, no drums. Guitar riff enters unaccompanied for 4 bars, then the
+  full band lands together at bar 9. Verse (16 bars) drops back to clean guitar
+  and bass with near-whispered vocal, drums on rim and hi-hat only. Pre-chorus
+  (8 bars) reintroduces distortion at half volume and tightens the drums.
+  Chorus (16 bars) is full distorted weight with the sung hook on top. Second
+  verse stays half-loud rather than returning fully to the clean texture.
+  Bridge (16 bars) strips to bass, drums, and whispered vocal, then a 4-bar
+  build into the final chorus, which repeats twice with the vocal shifted to a
+  shouted delivery. End abruptly on the downbeat or let the drone from the
+  intro return alone.
+
+vocal: >-
+  Korean-language male voice covering a wide expressive range in a single song:
+  breathy near-whisper and half-spoken rhythmic delivery in verses, full-throated
+  shouted and screamed delivery in choruses, with a clear melodic sung tone
+  underneath the aggression. Nasal-forward tone, tight rhythmic consonant
+  placement, angry but articulate rather than growled or unintelligible. No
+  guttural death-metal register, no auto-tuned smoothness.
+
+production: >-
+  Dense, theatrical, layered studio production - a wall of guitars stacked and
+  panned wide with the vocal dry and forward in the center. Heavy low-end weight
+  with a scooped upper midrange. Hard-compressed drums with real room bleed.
+  Electronic and industrial textures woven in as depth rather than as features.
+  Conceptual album-track feel: the arrangement is composed and sectioned, not a
+  live take, but performances stay human and slightly loose.
+
+constraints:
+  # Suno가 지시 없이 자기 습관대로 가는 것을 막는 부정 지시
+  - Do not use English-language vocals or Western rap-metal phrasing.
+  - Do not use clean pop-rock guitar tone, power-ballad arrangement, or orchestral strings.
+  - Do not use guttural death growls, blast beats, or thrash-speed tremolo picking.
+  - Do not use a female lead vocal, EDM drops, or trap hi-hat programming.
+  - Do not fill the upper midrange under the riff - the low end must sound empty above it.
+  - Do not flatten dynamics into constant loudness; the whispered verse must be genuinely quiet.
+
+grounding:
+  # 좋아요 데이터에서 관찰된 사실 (감이 아니라 근거)
+  liked_tracks: 42
+  core_era: 2000-2004   # 42곡 중 16곡이 2000년(6)·2004년(10)에 집중
+  median_duration_min: 3.9
+  note: >-
+    좋아요 연도 분포가 2000년(6곡)·2004년(10곡)에 몰려 있음 — 각각 Ultramania와
+    7집 Issue, 즉 서태지의 누메탈/얼터너티브 메탈 시기다. 90년대 서태지와 아이들의
+    댄스랩 시기가 아니라는 점이 핵심이며, instrumentation의 다운튜닝 7현 기타·
+    vocal의 속삭임/샤우트 대비·production의 인더스트리얼 레이어링은 모두 이 시기를
+    근거로 함. 2009년(5곡)과 2014~2015년(5곡)은 Atomos 계열로 더 몽환적이고
+    덜 공격적인데, dynamic_arc의 4마디 앰비언트 인트로와 bridge의 축소 구간,
+    optional의 전자 텍스처 항목이 이 범위를 반영. 곡 길이 중앙값 3.9분(0.4~6.3)은
+    장대한 전개보다 압축된 구조를 지지. 라이브러리 전체에서 k-rock 617곡·rock
+    1086곡·alternative 335곡으로 록 기반이 두터우며, The Volunteers, 시나위(미인),
+    YB, 크라잉넛, 넬 등 인접 아티스트도 확인됨.
+  genre_tags: [nu metal, k-rock, rock, alternative, korean metal]
+  # 이 프로필을 정의하는 아티스트 — 커버리지·실측 대조에 사용
+  match_artists: ["Seotaiji"]

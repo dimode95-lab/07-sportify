@@ -1,0 +1,120 @@
+# 포스트록 / 인스트루멘탈 스타일 프로필
+# 근거: 좋아요한 post-rock 태그 80곡 (한국/일본 아티스트 중심, 2014~2026)
+# 상태: AI 초안 — 생성 결과를 듣고 사용자가 교정할 것
+
+name: postrock_instrumental
+label: 포스트록 인스트루멘탈 (한·일 계열)
+
+identity: >-
+  Long-form instrumental guitar music built from repeating clean-guitar figures
+  that accumulate layers over minutes rather than bars, in the Korean/Japanese
+  post-rock lineage where math-rock interplay and shoegaze noise sit inside the
+  same arrangement.
+
+instrumentation:
+  # 화이트리스트 — 여기 없는 악기는 쓰지 않는다
+  allow:
+    - drums (live kit, ride-and-tom driven, brushed or open rather than tight)
+    - electric bass (sustained root movement, occasional melodic countermotion)
+    - clean electric guitar (delay and reverb, arpeggiated, primary voice)
+    - second clean electric guitar (interlocking figure, different rhythmic cycle)
+    - distorted electric guitar (saturated wall, entering only in later sections)
+  # 곡에 따라 소량 허용
+  optional:
+    - bowed guitar or e-bow sustain (background swell only)
+    - piano or glockenspiel (single-line motif, never chordal accompaniment)
+    - wordless vocal as texture (buried in the mix, no lead function)
+    - tape hiss, room noise, field recording under the intro
+  roles: >-
+    The two clean guitars are the melodic subject; one holds a repeating
+    arpeggiated figure unchanged while the other plays a shorter cycle across
+    it, so the phase between them shifts rather than the notes. Bass sustains
+    under both and only becomes melodic when the guitars drop out. Drums do not
+    keep a backbeat during the quiet sections - they mark the cycle with ride
+    and toms and only settle into a backbeat once distortion enters. Distorted
+    guitar is a density layer, not a lead.
+
+tempo_rhythm: >-
+  Roughly 70-100 BPM felt in half-time in the opening, with the same pulse read
+  as double-time once the drums fill in. Odd or shifting meters are expected -
+  5/4, 7/8, or a 4/4 figure phrased in groups of 3 so the downbeat migrates.
+  The guitar cycle length and the drum cycle length should not match; let them
+  realign every 3 or 4 bars instead of every bar.
+
+harmony: >-
+  Modal and slow-moving - two to four chords held for 4 or 8 bars each, usually
+  from a natural minor or Dorian center with a suspended, unresolved quality.
+  Open string drones ring through changing fingerings so the same pitch persists
+  across chords. Avoid functional cadences; the harmony should feel circular
+  rather than arriving. Resolution, if any, comes once at the final section.
+
+melody_hooks: >-
+  The hook is a figure, not a topline: a 2- or 4-bar arpeggiated guitar pattern
+  stated alone at the top and still audible under the loudest section. Signature
+  devices: tapped or hammered clean-guitar lines in the math-rock manner, a
+  single sustained bent note held across a chord change, and a second guitar
+  entering with the same figure displaced by one beat.
+
+dynamic_arc: >-
+  Roughly 5-6 minutes. Bars 1-16: solo clean guitar figure, no drums, room noise
+  audible. Bars 17-32: second guitar enters with the displaced cycle; bass joins
+  at bar 25. Bars 33-64: drums enter on ride and toms only, held below the
+  guitars, dynamics still restrained. Bars 65-80: first lift - drums move to the
+  full kit, a distorted guitar enters low in the mix, volume rises but the
+  original figure is unchanged. Bars 81-96: sudden drop to near-silence, one
+  guitar and a single cymbal wash. Bars 97-144: the long build - layers added
+  every 8 bars (second distorted guitar, cymbal density, bass octave up) with no
+  chord change, reaching a saturated peak around bar 128 and holding it.
+  Bars 145-160: everything cuts except the opening figure, which plays out alone
+  and decays into reverb.
+
+vocal: >-
+  Optional and textural only - this profile is complete as a pure instrumental
+  and should be generated that way by default. If voice is present it is
+  wordless and non-lexical (hummed, vowel-only, or invented syllables), mixed at
+  or below the guitar level and treated with the same reverb as the instruments,
+  so it reads as another layer rather than a lead. Never a foregrounded topline,
+  never intelligible lyrics, never call-and-response with the guitars.
+
+production: >-
+  Wide, long-decay reverb on everything with the guitars sharing one ambient
+  space rather than being separated. Cassette-leaning lo-fi tolerance is part of
+  the sound: slight tape saturation, a soft top end, and a peak section allowed
+  to clip and blur into a single mass instead of staying clean and separated.
+  Preserve the noise floor between sections - silence should not be digital.
+  Wide stereo for the two clean guitars, hard-panned against each other.
+
+constraints:
+  # Suno가 지시 없이 자기 습관대로 가는 것을 막는 부정 지시
+  - Do not add a lead vocal, verse-chorus form, or intelligible lyrics.
+  - Do not resolve the intro into a full-band groove within the first minute.
+  - Do not use orchestral strings, cinematic trailer swells, or choir pads.
+  - Do not use synth arpeggios, programmed drums, or quantized timing.
+  - Do not change the core guitar figure during the build - only add around it.
+  - Do not master it loud and even; the quiet sections must be genuinely quiet.
+
+grounding:
+  # 좋아요 데이터에서 관찰된 사실 (감이 아니라 근거)
+  liked_tracks: 80
+  core_era: 2021-2026   # 2021년 11곡, 2026년 9곡 등 최근작 비중이 큼
+  top_artists:
+    - "BrokenTeeth (9곡, 한국)"
+    - "우리는 끝없는 잔향 속에서 (7곡, 한국)"
+    - "Loro's (6곡, 한국) / Dabda (6곡, 한국)"
+    - "Sigur Rós (6곡) / 東京酒吐座 Tokyo Shoegazer (6곡)"
+    - "Parannoul (4곡, 한국) / toe (4곡, 일본) / cotoba (4곡, 일본)"
+    - "Mogwai (3곡) / 꿈에 카메라를 가져올걸 (3곡)"
+  median_duration_min: 5.3
+  note: >-
+    로스터가 Explosions in the Sky/Godspeed 류 북미 정전이 아니라 한국·일본
+    포스트록 중심(BrokenTeeth, Loro's, Dabda, toe, cotoba, Tokyo Shoegazer)이며
+    Sigur Rós와 Mogwai가 서구 축을 잡음. math rock 동시 태그 18건(toe, cotoba,
+    Dabda)이 유의미해서 tempo_rhythm의 변박·엇갈리는 사이클과 melody_hooks의
+    태핑 클린기타 항목의 근거가 됨. shoegaze 45건과 Parannoul의 로파이 질감은
+    production의 테이프 새추레이션·클리핑 허용 항목 근거. instrumental 태그
+    10건 대비 Sigur Rós의 무가사 보컬 때문에 vocal은 리드가 아닌 선택적 텍스처
+    레이어로 규정. 곡 길이 중앙값 5.3분(2.8~12.8분)으로 라이브러리 내 모든
+    클러스터 중 가장 길며, dynamic_arc를 160마디 규모 장척 구조로 쓴 근거.
+  genre_tags: [post-rock, shoegaze, math rock, ambient, dream pop, instrumental]
+  # 이 프로필을 정의하는 아티스트 — 커버리지·실측 대조에 사용
+  match_artists: ["BrokenTeeth", "Loro's", "Sigur Rós", "toe", "Mogwai", "Parannoul", "Dabda", "cotoba"]

@@ -1,0 +1,17 @@
+.env
+.cache*
+.venv/
+__pycache__/
+liked_songs.json
+liked_songs.csv
+artist_genres.json
+generation_log.json
+report.html
+prompt.txt
+audio_features.json
+
+# --- added for GitHub publish ---
+.claude/settings.local.json
+.venv/
+reviews.json
+*.log

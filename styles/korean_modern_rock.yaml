@@ -1,0 +1,94 @@
+name: korean_modern_rock
+label: 공간감 있는 한국 모던록 (넬 계열)
+identity: >-
+  Melancholic Korean atmospheric modern rock built on restraint and release -
+  wide, delay-soaked guitar space, a rhythm section that deliberately holds
+  back, and a high fragile male tenor carrying the emotional weight. Long-form
+  songs that earn their length through patient builds rather than repeated
+  hooks.
+instrumentation:
+  allow:
+    - drums (soft-mallet or brushed feel in verses, full stick attack only in choruses; ride and floor tom over snare backbeat)
+    - electric bass (rounded, sustained, slow-moving; holds the root while guitars drift)
+    - clean electric guitar (delay and reverb heavy, arpeggiated, ringing across the bar line)
+    - second electric guitar (tremolo or volume-swell textures, sustained single notes, no riffing)
+    - piano or Rhodes (sparse single-note figures and open voicings, doubling the guitar space)
+    - male lead vocal (single, high tenor, fragile)
+  optional:
+    - subtle string pad or bowed texture (enters only in the final section, never as a hook)
+    - light ambient synth wash (background bed, no melodic role)
+  roles: >-
+    The clean delay guitar is the primary atmosphere - it defines the harmonic
+    space with arpeggios that leave gaps rather than fill them. Bass and drums
+    are a restraint engine: they under-play for the whole first half so the
+    chorus lift comes from them finally committing, not from added instruments.
+    Piano shadows the vocal in the gaps with two or three notes at a time. The
+    second guitar contributes texture and sustain only, never a riff or a solo
+    that competes with the vocal.
+tempo_rhythm: >-
+  Mid-tempo and unhurried, roughly 78-110 BPM, often with a half-time feel in
+  the verses that resolves into full time at the chorus. Straight eighths with
+  no swing; guitar delay set to dotted-eighth or quarter-note subdivisions so
+  repeats create the pulse. Drums avoid busy fills and rimshot-heavy backbeats -
+  they open the beat wide with cymbal wash and let the space breathe. Sections
+  are long: 8 to 16 bars before anything changes.
+harmony: >-
+  Minor-key melancholy with modal color - natural minor and Dorian brightness on
+  the IV, frequent use of a suspended or add9 tension that never fully resolves.
+  Slow harmonic rhythm, often one chord per bar or per two bars, with pedal-tone
+  bass under shifting upper voicings. Bittersweet rather than dark: relative
+  major sections appear as brief relief, then fall back to minor.
+melody_hooks: >-
+  Long-breath vocal lines that stretch across several bars rather than compact
+  pop phrases, with the highest and most fragile note placed at the emotional
+  peak of the chorus. Signature devices: a repeating delayed guitar arpeggio
+  figure introduced alone at the top and returning transformed under the final
+  chorus; a wordless vocal or single sustained note as a transition; a
+  three-note piano motif that answers the vocal at the end of phrases.
+dynamic_arc: >-
+  Open with the delay guitar arpeggio alone for 15-20 seconds in near-silence.
+  First verse: vocal plus that guitar and a sustained bass note only, no drums
+  or only a soft pulse. Second verse: drums enter at half time with brushed or
+  soft attack, piano adds sparse notes. Pre-chorus thins out again - drop the
+  drums for two bars to create suspense. First chorus opens wide as drums move
+  to full time and the second guitar sustains underneath, but hold back the
+  ceiling. Bridge strips back to voice and one instrument, quietest point of the
+  song. Final chorus is the true release: full band, guitars layered and
+  ringing, vocal at its highest, and it does not end there - carry into an
+  extended instrumental outro of 60-90 seconds where the guitar figure repeats
+  and slowly decays into reverb rather than a hard stop.
+vocal: >-
+  High, clear, fragile male tenor in the upper register, sung with breath and
+  restraint rather than force. Delivery is intimate and slightly withheld in the
+  verses, opening into a strained, emotionally raw but never shouted peak in the
+  final chorus. Vocal sits inside the reverb field with the band, not pushed
+  dry and forward.
+production: >-
+  Wide, spacious stereo image with long reverb tails and audible delay repeats
+  that are part of the arrangement, not an effect on top of it. Generous
+  headroom and low average loudness so the quiet sections are genuinely quiet.
+  Warm, slightly dark tonal balance; guitars clean or lightly overdriven at the
+  edge of breakup, never scooped or crunchy. Drums recorded roomy with cymbals
+  and ambience left in.
+constraints:
+  - Do not use punchy, riff-driven or distorted alt-rock guitar tones.
+  - Do not build to an anthemic stadium-rock or pop-punk chorus with gang vocals.
+  - Do not use a gravelly, belted, or rasping male voice, and no female lead vocal.
+  - Do not use programmed, trap, or four-on-the-floor dance drum patterns.
+  - Do not compress the arrangement into a short verse-chorus pop form - the quiet opening and the long instrumental outro must both survive.
+  - Do not keep the drums at constant intensity throughout; the verses must be noticeably emptier than the choruses.
+grounding:
+  liked_tracks: 52
+  core_era: 2008-2026
+  median_duration_min: 4.4
+  note: >-
+    좋아요한 넬 곡의 중앙값 길이가 4.4분, 최장 8.2분으로 라이브러리 전체 평균보다 뚜렷하게 길다. 짧은 훅 반복이
+    아니라 느린 빌드와 긴 연주 아웃트로를 끝까지 듣는 취향이므로, dynamic_arc를 도입-정적 구간-후반 해방-연장
+    아웃트로 구조로 길게 잡고 tempo_rhythm의 섹션 길이를 8-16마디로 명시했다. 2008년부터 2026년까지 특정
+    시기에 몰리지 않고 전 커리어에 고르게 분포하는 점은, 시대별 사운드보다 넬의 변하지 않는 핵심(공간계 딜레이
+    기타, 절제된 리듬 섹션, 높고 여린 남성 보컬)에 반응하고 있다는 뜻이라 instrumentation과 vocal을 특정
+    앨범 색이 아닌 그 핵심 요소 중심으로 좁혔다. 라이브러리에 k-rock 617곡, alternative 335곡, 인접한
+    슈게이즈/포스트록 군집 45곡이 함께 있어 production을 넓은 스테레오와 긴 리버브 테일 쪽으로 두었다.
+  genre_tags: [k-rock, alternative, indie, rock, post-rock]
+  # 이 프로필을 정의하는 아티스트 — 커버리지·실측 대조에 사용
+  match_artists: ["NELL"]

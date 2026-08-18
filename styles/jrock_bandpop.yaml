@@ -1,0 +1,99 @@
+name: jrock_bandpop
+label: 현대 일본 밴드팝/록 (히게단 계열)
+identity: >-
+  Contemporary Japanese band pop built on a piano-and-guitar front line, dense
+  jazz- and gospel-colored chord changes, and a busy syncopated rhythm section
+  that never sits still. Emotionally direct songs carried by a high, bright male
+  tenor that pushes into its top register at every chorus.
+instrumentation:
+  allow:
+    - drums (live kit, busy and syncopated; ghost notes on snare, open hi-hat accents on offbeats, tom fills that land ahead of the downbeat)
+    - electric bass (fingerstyle, high-mobility, walking and chromatic passing lines under the changes)
+    - acoustic piano (lead voice - block-chord comping, right-hand fills, and instrumental hooks between vocal phrases)
+    - clean electric guitar (intricate arpeggiated and tapped figures, math-rock style interlocking with the piano)
+    - second electric guitar (light crunch, staccato chord stabs on the upbeats)
+    - male lead vocal (single, high bright tenor)
+    - stacked male backing harmonies (thirds and sixths, chorus only)
+  optional:
+    - electric piano or clavinet (funk comping in verses, hands the lead back to acoustic piano at the chorus)
+    - small horn section (short punctuating stabs at section transitions only, never a melody line)
+    - handclaps or finger snaps (bridge or final chorus lift only)
+  roles: >-
+    Piano is a lead instrument, not background texture - it states the intro
+    motif, comps rhythmically under the verse, and fills the gaps at the end of
+    vocal phrases. Clean electric guitar interlocks with the piano rather than
+    strumming behind it: the two trade intricate figures that lock into a single
+    composite pattern. Bass is a third melodic voice, moving constantly with
+    chromatic approach notes into each chord change. Drums drive the arrangement
+    with sixteenth-note hi-hat activity and displaced accents that make the beat
+    feel pulled forward. Backing harmonies appear only to widen the chorus.
+tempo_rhythm: >-
+  Uptempo and forward-leaning, roughly 130-165 BPM. Straight sixteenth-note
+  subdivision with heavy syncopation - vocal and instrumental phrases start on
+  offbeats and tie across bar lines rather than landing squarely on beat one.
+  Frequent short metric disruptions: a 2/4 or 7/8 bar inserted at a section
+  seam, or a bar of half-time before the chorus drops back into full time.
+  Sections turn over quickly, often 4 or 8 bars, with a stop-time break of one
+  or two beats just before each chorus.
+harmony: >-
+  Dense, fast-moving harmony borrowed from jazz, gospel and R&B: two or more
+  chord changes per bar, extended voicings (maj7, m9, 13, sus4, add9), secondary
+  dominants, and frequent modal interchange that borrows minor-key chords into a
+  major-key song. Bright overall with a bittersweet undertow - choruses often
+  pivot briefly to a borrowed IVm or bVII before resolving. Key changes are
+  welcome: a semitone or whole-step lift into the final chorus.
+melody_hooks: >-
+  Wide-interval vocal topline with large leaps into the upper register, phrases
+  that begin on an offbeat and are packed with fast syllabic runs, then open into
+  one long sustained high note at the chorus peak. Piano and clean guitar carry a
+  second, independent hook: a repeating instrumental riff stated alone in the
+  intro, answered in the verse gaps, and layered under the final chorus.
+dynamic_arc: >-
+  Open with the piano motif alone for 4-8 bars, then a single stop before the
+  full band crashes in for a short instrumental statement of the hook. Drop to a
+  sparse first verse - vocal with electric piano comping, bass, and hi-hat only,
+  no crash cymbals. Pre-chorus tightens: drums move to a driving sixteenth
+  pattern, guitar enters with staccato stabs, the harmony climbs. Cut everything
+  for one beat of silence, then the first chorus lands wide with full band,
+  stacked harmonies and acoustic piano back in the lead. Second verse returns
+  lower but keeps the drums. Bridge is the contrast point: strip to voice and
+  piano alone, slow the harmonic rhythm, then rebuild over 4 bars with a tom
+  crescendo. Final chorus is the peak - key lifted, vocal in its highest range,
+  guitar and piano stating the hook simultaneously - and it ends on a short, tight
+  band hit rather than a fade.
+vocal: >-
+  High, bright, clean male tenor with an unusually wide range, comfortable in a
+  head-voice-adjacent top register and using falsetto flips at phrase ends.
+  Delivery is precise and rhythmically agile in the verses - close to sung-spoken
+  rapid articulation - and fully open, powerful and emotionally direct in the
+  chorus. Japanese-language phrasing with crisp consonants and no rasp or growl.
+production: >-
+  Modern, punchy, high-clarity band production: everything present and separated,
+  with the piano forward in the mix rather than buried. Drums are tight with
+  short room decay and a snappy snare; bass is defined enough to hear every
+  passing note. Moderate arena ambience and audible crowd-free live-band energy -
+  the feel of a well-recorded stadium performance rather than a dry studio take.
+  Loud and full but with real dynamic contrast between verse and chorus.
+constraints:
+  - Do not relegate the piano to a background pad - it must carry lead lines and fills.
+  - Do not simplify the harmony to a three or four chord loop with one chord per bar.
+  - Do not use a gravelly, shouted, screamed, or low-baritone male voice, and no female lead vocal.
+  - Do not use programmed trap, EDM, or four-on-the-floor dance drum patterns, and no synth-lead production.
+  - Do not straighten out the syncopation into on-the-beat power-chord punk rock.
+  - Do not flatten the dynamics - the first verse must be noticeably sparser than the chorus.
+grounding:
+  liked_tracks: 191
+  core_era: 2021-2026
+  median_duration_min: 3.9
+  note: >-
+    j-rock/j-pop 태그 191곡 중 OFFICIAL HIGE DANDISM이 33곡으로 압도적 1위이고, Vaundy·星野源·
+    Saucy Dog가 뒤를 받치는 구조라 프로필의 중력을 히게단 쪽(피아노 리드, 조밀한 재즈/가스펠 코드, 높고 밝은
+    남성 테너)에 두었고 그것이 instrumentation의 piano 승격과 harmony·vocal 항목의 근거다. 히게단 곡
+    상당수가 "LIVE at STADIUM 2025" 라이브 음원이라, production을 드라이한 스튜디오가 아니라 아레나
+    앰비언스가 살아있는 라이브 밴드 사운드로 지정했다. 동시 태그에 math rock 17곡·midwest emo 17곡
+    (Hitohira 등)이 붙어 있어 clean 기타의 인터로킹 아르페지오와 변박·싱코페이션을 tempo_rhythm과
+    instrumentation.roles에 명시했다. 발매연도가 2021년 이후에 몰려 있고 중앙값 3.9분으로 짧은 편이라
+    dynamic_arc를 4-8마디 단위로 빠르게 전개되는 압축 구조로 잡았다.
+  genre_tags: [j-rock, j-pop, rock, math rock, midwest emo, emo, indie rock]
+  # 이 프로필을 정의하는 아티스트 — 커버리지·실측 대조에 사용
+  match_artists: ["OFFICIAL HIGE DANDISM", "Saucy Dog", "Vaundy", "Gen Hoshino", "Hitohira", "Masayoshi Oishi"]

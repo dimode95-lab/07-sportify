@@ -3,24 +3,46 @@
  *
  * 설치는 SETUP.md 참고. 요약:
  *   1) Google Sheets 새 문서 → 확장 프로그램 → Apps Script → 이 파일 내용 붙여넣기
- *   2) 아래 SECRET 값을 SETUP.md에 적힌 값으로 교체
+ *   2) 아래 SECRET 값을 .env의 REVIEW_API_SECRET 값으로 교체
  *   3) 배포 → 새 배포 → 웹 앱 (실행: 나, 액세스: 모든 사용자) → URL 복사
  */
 
-const SECRET = "CHANGE_ME"; // ← SETUP.md의 비밀 토큰으로 교체
+const SECRET = "CHANGE_ME"; // ← .env의 REVIEW_API_SECRET 값으로 교체
 const SHEET_NAME = "reviews";
 const TIMEZONE = "Asia/Seoul";
-const HEADERS = ["saved_at", "added_at", "track_id", "track_name", "artists", "album", "release_date", "review", "spotify_url"];
+const HEADERS = ["saved_at", "added_at", "track_id", "track_name", "artists", "album", "release_date", "review", "spotify_url", "rating"];
 
 function getSheet_() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
-  let sh = ss.getSheetByName(SHEET_NAME);
-  if (!sh) sh = ss.insertSheet(SHEET_NAME);
-  if (sh.getLastRow() === 0) {
-    sh.appendRow(HEADERS);
-    sh.setFrozenRows(1);
-  }
-  return sh;
+  // 여러 기기가 동시에 새 버전에 접속해도 헤더를 한 번만 확장한다.
+  const lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    let sh = ss.getSheetByName(SHEET_NAME);
+    if (!sh) sh = ss.insertSheet(SHEET_NAME);
+    if (sh.getLastRow() === 0) {
+      sh.appendRow(HEADERS);
+      sh.setFrozenRows(1);
+    } else {
+      const headers = sh.getRange(1, 1, 1, HEADERS.length).getValues()[0];
+      if (HEADERS.slice(0, 9).some(function (h, i) { return headers[i] !== h; }) || (headers[9] && headers[9] !== "rating")) {
+        throw new Error("시트 열 구성이 예상과 달라요. 기존 데이터를 확인해 주세요.");
+      }
+      if (!headers[9]) sh.getRange(1, 10).setValue("rating");
+    }
+    SpreadsheetApp.flush();
+    return sh;
+  } finally { lock.releaseLock(); }
+}
+
+function validRating_(value) {
+  return typeof value === "number" && isFinite(value) && value >= 0.5 && value <= 5 && Number.isInteger(value * 2);
+}
+
+function storedRating_(value) {
+  if (value === "" || value == null) return null;
+  const number = Number(value);
+  return validRating_(number) ? number : null;
 }
 
 function json_(obj) {
@@ -64,7 +86,7 @@ function doPost(e) {
     const sh = getSheet_();
     switch (body.action) {
       case "ping":
-        return json_({ ok: true, message: "pong", reviews: Math.max(0, sh.getLastRow() - 1) });
+        return json_({ ok: true, message: "pong", reviews: Math.max(0, sh.getLastRow() - 1), api_version: 3, rating_step: 0.5 });
 
       case "ids": {
         const n = sh.getLastRow() - 1;
@@ -80,7 +102,7 @@ function doPost(e) {
         const out = rows.map(function (r) {
           const obj = {};
           HEADERS.forEach(function (h, i) {
-            obj[h] = r[i] instanceof Date ? r[i].toISOString() : r[i];
+            obj[h] = h === "rating" ? storedRating_(r[i]) : r[i] instanceof Date ? r[i].toISOString() : r[i];
           });
           return obj;
         });
@@ -91,41 +113,49 @@ function doPost(e) {
       }
 
       case "add": {
-        const reviews = Array.isArray(body.reviews) ? body.reviews : [];
+        if (!Array.isArray(body.reviews) || !body.reviews.length || body.reviews.length > 1000) {
+          return json_({ ok: false, error: "저장할 기록을 확인해 주세요." });
+        }
+        const reviews = body.reviews;
         // 동시에 두 번 저장돼도 시트가 꼬이지 않도록 잠금
         const lock = LockService.getScriptLock();
         lock.waitLock(10000);
         try {
           const n0 = sh.getLastRow() - 1;
-          const idCol = n0 > 0 ? sh.getRange(2, 3, n0, 1).getValues().map(function (r) { return String(r[0]); }) : [];
+          const rows = n0 > 0 ? sh.getRange(2, 1, n0, HEADERS.length).getValues() : [];
+          const idCol = rows.map(function (r) { return String(r[2]); });
           let added = 0, updated = 0;
           const now = nowLocal_();
-          for (let k = 0; k < reviews.length; k++) {
-            const rv = reviews[k];
-            if (!rv || !rv.track_id || !String(rv.review || "").trim()) continue;
-            const row = [
-              literal_(now),
-              literal_(rv.added_at),
-              literal_(rv.track_id),
-              literal_(rv.name),
-              literal_(rv.artists),
-              literal_(rv.album),
-              literal_(rv.release_date),
-              literal_(String(rv.review).trim()),
-              literal_(rv.url),
-            ];
-            const idx = idCol.indexOf(String(rv.track_id));
+          const seen = new Set();
+          // 전부 검증한 뒤 쓰기 시작해야 잘못된 한 항목 때문에 일부만 저장되지 않는다.
+          const pending = reviews.map(function (rv) {
+            if (!rv || typeof rv.track_id !== "string" || !rv.track_id.trim() || seen.has(rv.track_id)) throw new Error("곡 식별자를 확인해 주세요.");
+            seen.add(rv.track_id);
+            const idx = idCol.indexOf(rv.track_id);
+            const old = idx >= 0 ? rows[idx] : Array(HEADERS.length).fill("");
+            const has = function (key) { return Object.prototype.hasOwnProperty.call(rv, key); };
+            if (has("rating") && rv.rating !== null && !validRating_(rv.rating)) throw new Error("평점은 0.5~5점 사이의 0.5점 단위여야 해요.");
+            if (has("review") && (typeof rv.review !== "string" || rv.review.length > 300)) throw new Error("한줄평은 300자 이내의 글이어야 해요.");
+            const review = has("review") ? rv.review.trim() : String(old[7] || "");
+            const rating = has("rating") ? rv.rating : storedRating_(old[9]);
+            if (!review && rating === null) throw new Error("평점이나 한줄평을 남겨 주세요.");
+            const value = function (key, i) { return has(key) ? rv[key] : old[i]; };
+            const row = [now, value("added_at", 1), rv.track_id, value("name", 3), value("artists", 4), value("album", 5), value("release_date", 6), review, value("url", 8), rating];
+            return { id: rv.track_id, idx: idx, row: row.map(literal_) };
+          });
+          pending.forEach(function (item) {
+            const idx = item.idx;
             if (idx >= 0) {
-              // 같은 곡을 다시 저장하면 새 한줄평으로 갱신
-              sh.getRange(idx + 2, 1, 1, HEADERS.length).setValues([row]);
+              // 평점만 수정해도 곡 정보와 구버전 앱이 생략한 평점은 보존한다.
+              sh.getRange(idx + 2, 1, 1, HEADERS.length).setValues([item.row]);
               updated++;
             } else {
-              sh.appendRow(row);
-              idCol.push(String(rv.track_id));
+              sh.appendRow(item.row);
               added++;
             }
-          }
-          return json_({ ok: true, added: added, updated: updated });
+          });
+          SpreadsheetApp.flush();
+          return json_({ ok: true, added: added, updated: updated, saved_ids: pending.map(function (item) { return item.id; }) });
         } finally {
           lock.releaseLock();
         }

@@ -43,11 +43,13 @@ def main() -> None:
     reviews = data["reviews"]
     with open("reviews.json", "w", encoding="utf-8") as f:
         json.dump(reviews, f, ensure_ascii=False, indent=2)
-    print(f"한줄평 {len(reviews)}건 저장 완료: reviews.json\n")
+    print(f"별점·한줄평 {len(reviews)}건 저장 완료: reviews.json\n")
 
     for r in reviews[:10]:
         print(f"  · {r['track_name']} — {r['artists']}")
-        print(f"    \"{r['review']}\"  ({str(r['saved_at'])[:10]})")
+        rating = r.get("rating")
+        score = f"{rating:.1f}/5점" if isinstance(rating, (int, float)) and not isinstance(rating, bool) else "미평가"
+        print(f"    {score} · \"{r.get('review') or '한줄평 없음'}\"  ({str(r['saved_at'])[:10]})")
 
 
 if __name__ == "__main__":

@@ -116,12 +116,18 @@ python log_generation.py --show
 기록이라, 스타일 프로필을 교정할 때 데이터가 못 잡는 부분(리프·훅·공간감 같은
 인상)을 채워주는 재료가 된다.
 
+별점은 **0.5~5점, 0.5점 간격**이다. 별의 왼쪽 절반은 반 점, 오른쪽 절반은 온 점으로
+선택한다. 별점과 한줄평은 각각 단독으로도 저장할 수 있으며, 지난 기록에서 수정할 수 있다.
+기존 한줄평의 평점은 미평가로 유지된다.
+
 - 앱: https://dimode95-lab.github.io/sportify-review/ (코드: `review-app/`, 설치: [SETUP.md](SETUP.md))
 - 저장: Google Sheets (Apps Script 웹 앱, 코드: `apps_script/Code.gs`)
 
 ```powershell
 python fetch_reviews.py      # 한줄평 데이터 → reviews.json
 ```
+
+별점 입력·기존 시트 호환 검증은 저장소 루트에서 `node --test tests/review-rating.test.cjs`로 실행한다.
 
 ## 스타일 프로필 목록
 
